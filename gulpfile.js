@@ -4,7 +4,7 @@ var gulp = require('gulp'), // Подключаем Gulp
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('sass', function(){ // Создаем таск Sass
-    return gulp.src('src/scss/**/*.sass') // Берем источник
+    return gulp.src('src/scss/**/*.scss') // Берем источник
         .pipe(sass({outputStyle: 'compressed'})) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(gulp.dest('build/css')) // Выгружаем результата в папку build/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
@@ -20,6 +20,6 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
-    gulp.watch('src/scss/**/*.sass', ['sass']); // Наблюдение за sass файлами
+    gulp.watch('src/scss/**/*.scss', ['sass']); // Наблюдение за sass файлами
     // Наблюдение за другими типами файлов
 });
