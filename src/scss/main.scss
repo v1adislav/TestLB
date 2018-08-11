@@ -1,9 +1,19 @@
-body{
-	background: #fff;
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
 }
-.test{
-	background: green;
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
+#main-info{
+	background: #606caf;
+	.main-info__profile{
+		width: 50%;
+		.main-info__profile-avatar{
+			
+			& img{
+				max-height: 100%;
+				max-width: 100%;
+				border-radius: 50%;
+			}
+		}
+	}
 }

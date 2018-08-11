@@ -1,1 +1,1 @@
-body{background:#fff}.test{background:green;width:100px;height:100px;margin:0 auto}
+*{box-sizing:border-box;padding:0;margin:0}#main-info{background:#606caf}#main-info .main-info__profile{width:50%}#main-info .main-info__profile .main-info__profile-avatar img{max-height:100%;max-width:100%;border-radius:50%}

@@ -1,6 +1,7 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'),
+    imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('sass', function(){ // Создаем таск Sass
@@ -18,8 +19,13 @@ gulp.task('browser-sync', function() {
     });
 });
 
+gulp.task('default', () =>
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'))
+);
 
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'default'], function() {
     gulp.watch('src/scss/**/*.scss', ['sass']); // Наблюдение за sass файлами
     // Наблюдение за другими типами файлов
 });
