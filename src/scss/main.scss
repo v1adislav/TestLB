@@ -4,15 +4,72 @@ padding: 0;
 margin: 0;
 }
 #main-info{
+	display: flex;
+	justify-content: space-between;
 	background: #606caf;
+	padding: 4rem 10rem;
 	.main-info__profile{
+		display: flex;
 		width: 50%;
 		.main-info__profile-avatar{
-			
+			align-self:center;
 			& img{
+				width: 150px;
+				height: auto;
 				max-height: 100%;
 				max-width: 100%;
 				border-radius: 50%;
+			}
+		}
+		.main-info__profile-spec{
+			align-self:center;
+			margin-left: 2rem;
+			& h1{
+				color: #fff;
+				font-size: 35px;
+			}
+			& h2{
+				color: #fff;
+				font-weight: 300;
+			}
+		}
+	}
+	.main-info__contacts{
+		align-self:center;
+		.contacts-list{
+			list-style: none;
+			color: #fff;
+			line-height: 2rem;
+			font-size: 18px;
+			&__adress:before{
+				display: block;
+				position: relative;
+				left: -31px;
+				top: 33px;
+				content: "";
+				width: 19px;
+				height: 26px;
+				background: url(../img/geo.png) no-repeat;
+			}
+			&__mail:before{
+				display: block;
+				position: relative;
+				left: -34px;
+				top: 30px;
+				content: "";
+				width: 26px;
+				height: 25px;
+				background: url(../img/globus.png) no-repeat;
+			}
+			&__tel:before{
+				display: block;
+				position: relative;
+				left: -29px;
+				top: 30px;
+				content: "";
+				width: 18px;
+				height: 26px;
+				background: url(../img/telephone.png) no-repeat;
 			}
 		}
 	}

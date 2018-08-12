@@ -26,6 +26,6 @@ gulp.task('default', () =>
 );
 
 gulp.task('watch', ['browser-sync', 'sass', 'default'], function() {
-    gulp.watch('src/scss/**/*.scss', ['sass']); // Наблюдение за sass файлами
+    gulp.watch('src/scss/**/*.scss', ['sass'], ['default']); // Наблюдение за sass файлами
     // Наблюдение за другими типами файлов
 });
