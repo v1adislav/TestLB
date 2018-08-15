@@ -74,3 +74,37 @@ margin: 0;
 		}
 	}
 }
+#aboutMe{
+	padding: 4rem 8rem;
+	.profile{
+		width: 30%;
+}
+		.main__title{
+			display: flex;
+			.main__wrapper-icon{
+				background: #606caf;
+				border-radius: 50%;
+				width: 33px;
+				height: 33px;
+			}
+			& img{
+					width: 33px;
+					height: auto;
+					max-height: 100%;
+					max-width: 100%;
+					padding: 9px;
+			}	
+			.main__head{
+				color: #000;
+				font-size: 25px;
+				margin-left: 1rem;
+				font-weight: 600;
+				align-self: center;
+			}
+		}
+		.profile__descr{
+				color: #2e3131;
+				padding: 1rem 0;
+		}
+	
+}
