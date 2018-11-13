@@ -3,43 +3,46 @@ box-sizing: border-box;
 padding: 0;
 margin: 0;
 }
-#main-info{
-	display: flex;
-	justify-content: space-between;
+header{
+	width: 100%;
 	background: #606caf;
-	padding: 4rem 10rem;
-	.main-info__profile{
+}
+.container{
+	display: flex;
+	padding: 2rem;
+	justify-content: space-between;
+}
+.main-info__profile{
 		display: flex;
 		width: 50%;
-		.main-info__profile-avatar{
-			align-self:center;
-			& img{
-				width: 150px;
-				height: auto;
-				max-height: 100%;
+			& img{			
+				display: flex;
+    			align-self: center;	
 				max-width: 100%;
 				border-radius: 50%;
 			}
-		}
 		.main-info__profile-spec{
 			align-self:center;
 			margin-left: 2rem;
 			& h1{
+				font-family: 'Montserrat', sans-serif;
 				color: #fff;
 				font-size: 35px;
 			}
 			& h2{
 				color: #fff;
 				font-weight: 300;
+				font-family: 'Open Sans', sans-serif;
 			}
 		}
 	}
-	.main-info__contacts{
+.main-info__contacts{
 		align-self:center;
 		.contacts-list{
 			list-style: none;
 			color: #fff;
 			line-height: 2rem;
+			font-family: 'Open Sans', sans-serif;
 			font-size: 18px;
 			&__adress:before{
 				display: block;
@@ -71,40 +74,57 @@ margin: 0;
 				height: 26px;
 				background: url(../img/telephone.png) no-repeat;
 			}
-		}
 	}
 }
-#aboutMe{
-	padding: 4rem 8rem;
-	.profile{
-		width: 30%;
+.main-wrapper{
+	padding-left: 4rem;
+	padding-right: 4rem;
+	padding-top: 2rem;
 }
-		.main__title{
-			display: flex;
-			.main__wrapper-icon{
-				background: #606caf;
-				border-radius: 50%;
-				width: 33px;
-				height: 33px;
+.left-block{
+	width: 30%;
+}
+.icon-wrap{
+	padding: 10px;
+	background: #606caf;
+	border-radius: 50%;
+	margin-right: 1rem;
+	& img{
+		height: 25px;
+	}
+}
+.profile-info__title{
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	& h3{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 26px;
+	}
+}
+@media screen and (max-width: 788px) {
+	.main-info__profile-spec{
+			& h1{
+				font-size: 25px !important;
 			}
-			& img{
-					width: 33px;
-					height: auto;
-					max-height: 100%;
-					max-width: 100%;
-					padding: 9px;
-			}	
-			.main__head{
-				color: #000;
-				font-size: 25px;
-				margin-left: 1rem;
-				font-weight: 600;
-				align-self: center;
+			& h2{
+				font-size: 20px;
 			}
 		}
-		.profile__descr{
-				color: #2e3131;
-				padding: 1rem 0;
+		.main-info__contacts .contacts-list{
+			font-size: 16px;
 		}
-	
+}
+@media screen and (max-width: 598px) {
+	.container{
+		flex-direction: column;
+		justify-content: center;
+	}	
+	.main-info__profile {
+			width: 100%;
+			flex-direction: column;
+	}
+	.main-info__profile-spec{
+		margin: 0 !important;
+	}
 }

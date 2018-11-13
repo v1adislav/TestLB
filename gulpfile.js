@@ -1,4 +1,4 @@
-var gulp = require('gulp'), // Подключаем Gulp
+﻿var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
@@ -20,7 +20,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('default', () =>
-    gulp.src('src/img/*')
+   gulp.src('src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
 );

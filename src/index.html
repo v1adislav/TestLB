@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="../build/css/main.css" >
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
 </head>
 
 <body>
-	<section id="main-info">
+	<header>
+		<div class="container">	
 		<div class="main-info__profile">
-			<div class="main-info__profile-avatar">
 				<img src="build/img/avatar.jpg" alt="Аватар">
-			</div>
 			<div class="main-info__profile-spec">
 				<h1>Vladislav Markov</h1>
 				<h2>Web-developer</h2>
@@ -24,35 +27,25 @@
 				<li class="contacts-list__tel">+444 034 534</li>
 			</ul>
 		</div>
-	</section>
-	<section id="aboutMe">
-		<div class="profile">
-			<div class="main__title">
-				<div class="main__wrapper-icon">
-					<img src="build/img/box.png" alt="Портфель">
-				</div>
-				<div class="main__head">
-					Profile info
+	</div>
+	</header>
+	<main>
+		<div class="main-wrapper">
+			<div class="left-block">
+				<div class="profile-info">
+					<div class="profile-info__title">
+						<div class="icon-wrap">
+							<img src="build/img/box.png" alt="Рюкзак">
+						</div>
+						<h3>Profile info</h3>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae accusamus, dignissimos provident omnis ad velit repellat, quos facere? Temporibus quod sunt ullam cupiditate ut unde error fugit quo a corporis?</p>
 				</div>
 			</div>
-			
-			<div class="profile__descr">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus sequi repellendus sit, culpa facilis unde beatae obcaecati veniam accusamus iusto quaerat fugiat consectetur ut, hic quibusdam? Omnis magnam, deleniti.
-			</div>
-		</div>
-		<div class="interests">
-			<div class="main__title">
-				<div class="main__wrapper-icon">
-					<img src="build/img/box.png" alt="Портфель">
-				</div>
-				<div class="main__head">
-					Interests
-				</div>
-				<div class="interest-list">
-					
-				</div>
+			<div class="right-block">
+				
 			</div>
 		</div>
-	</section>
+	</main>
 </body>
 </html>
