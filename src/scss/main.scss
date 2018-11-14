@@ -174,7 +174,7 @@ header{
 		    top: 44px;
 		    left: -22px;
 		    width: 1px;
-		    height: 79px;
+		    height: calc(100% + 14px);
 		    content: '';
 		    background-color: #aca9a9;
 		    z-index: 0;
@@ -252,7 +252,7 @@ header{
 					    top: 44px;
 					    left: -22px;
 					    width: 1px;
-					    height: 79px;
+					    height: calc(100% + 14px);
 					    content: '';
 					    background-color: #aca9a9;
 					    z-index: 0;
