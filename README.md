@@ -2,7 +2,7 @@
 
 node.js - https://nodejs.org/ + npm
 
-git - https://github.com/v1adislav
+git - https://git-scm.com/download/win
 
 gulp
 
