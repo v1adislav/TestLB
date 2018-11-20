@@ -78,9 +78,7 @@ header{
 }
 .main-wrapper{
 	display: flex;
-	padding-left: 4rem;
-	padding-right: 4rem;
-	padding-top: 2rem;
+	padding: 2rem 4rem 5rem 4rem;
 }
 .left-block{
 	width: 20%;
@@ -244,7 +242,7 @@ header{
 				&__text{
 					width: 70%;
 					font-family: 'Open Sans', sans-serif;
-					margin-left: 10rem;
+					margin-left: 6rem;
 				}
 			}
 			.experience-item:last-child li:after{
@@ -265,10 +263,12 @@ header{
 .skills-list{
 	display: flex;
 	justify-content: space-around;
+	flex-wrap:wrap;
 	.skills-item__wrap{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		.skills-counter{
 			    position: relative;
 			    text-align: center;
@@ -310,6 +310,9 @@ header{
 		flex-direction: column;
 		justify-content: center;
 	}	
+	.main-info__profile .main-info__profile-spec h2{
+		text-align: center;
+	}
 	.main-info__profile {
 			width: 100%;
 			flex-direction: column;
@@ -330,4 +333,22 @@ header{
 		width: 100%;
 		margin-left: 0;
 	}
+	.awwards{
+		margin-bottom: 2rem;
+	}
+
+}
+
+@media screen and (max-width: 810px){
+	.left-block__title h3, .right-block__title h3{
+		font-size: 20px;
+	}
+	.right-block .experence .experience-wrap .experience-item__text{
+		font-size: 14px;
+		margin-left: 0rem;
+	}
+	.skills-item__wrap{
+			margin-bottom: 2rem;
+		}
+
 }
