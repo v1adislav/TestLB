@@ -1,5 +1,6 @@
 ﻿var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет,
+    uglify = require('gulp-uglify'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
@@ -18,6 +19,11 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+gulp.task('gulp-uglify', function(){
+   gulp.src('src/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('build/js/'))
+});
 
 gulp.task('default', () =>
    gulp.src('src/img/*')
@@ -25,7 +31,7 @@ gulp.task('default', () =>
         .pipe(gulp.dest('build/img'))
 );
 
-gulp.task('watch', ['browser-sync', 'sass', 'default'], function() {
-    gulp.watch('src/scss/**/*.scss', ['sass'], ['default']); // Наблюдение за sass файлами
-    // Наблюдение за другими типами файлов
+gulp.task('watch', ['browser-sync'], function() {
+    gulp.watch('src/scss/**/*.scss',['sass']);
+    gulp.watch('src/js/*.js',['gulp-uglify']); 
 });
