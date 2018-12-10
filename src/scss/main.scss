@@ -20,8 +20,10 @@ $montserrat: Montserrat-Regular, sans-serif;
 
 .container{
 	display: flex;
-    padding: 3rem 4rem 4rem 4rem;
+	max-width: 1340px;
+    padding: 3rem 2rem 4rem 2rem;
 	justify-content: space-between;
+	margin: auto;
 }
 .main-info__profile{
 		display: flex;
@@ -218,7 +220,7 @@ $montserrat: Montserrat-Regular, sans-serif;
 					}
 				}
 				&__text{
-					width: 70%;
+					width: 40%;
 					font-family: $sans;
 					margin-left: 6rem;
 				}
@@ -239,11 +241,12 @@ $montserrat: Montserrat-Regular, sans-serif;
 		}
 .skills-list{
 	display: flex;
-	justify-content: space-around;
 	flex-wrap:wrap;
 	.skills-item__wrap{
 		display: flex;
 		flex-direction: column;
+		margin-right: 4rem;
+		margin: auto;
 		align-items: center;
 		text-align: center;
 		.skills-counter{
