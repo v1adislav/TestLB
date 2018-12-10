@@ -7,6 +7,17 @@ header{
 	width: 100%;
 	background: #606caf;
 }
+@font-face{
+    font-family: OpenSans-Regular;
+    src : url("/src/fonts/OpenSans-Regular.ttf")
+}
+@font-face{
+    font-family: Montserrat-Regular;
+    src : url("/src/fonts/Montserrat-Regular.ttf")
+}
+$sans: OpenSans-Regular, sans-serif;
+$montserrat: Montserrat-Regular, sans-serif;
+
 .container{
 	display: flex;
     padding: 3rem 4rem 4rem 4rem;
@@ -25,24 +36,25 @@ header{
 			align-self:center;
 			margin-left: 2rem;
 			& h1{
-				font-family: 'Montserrat', sans-serif;
+				font-family: $montserrat;
 				color: #fff;
 				font-size: 35px;
 			}
 			& h2{
 				color: #fff;
 				font-weight: 300;
-				font-family: 'Open Sans', sans-serif;
+				font-family: $sans;
 			}
 		}
 	}
 .main-info__contacts{
 		align-self:center;
-		.contacts-list{
+		.contacts-list a, .contacts-list{
 			list-style: none;
+			text-decoration: none;
 			color: #fff;
 			line-height: 2rem;
-			font-family: 'Open Sans', sans-serif;
+			font-family: $sans;
 			font-size: 18px;
 			&__adress:before{
 				display: block;
@@ -76,6 +88,13 @@ header{
 			}
 	}
 }
+.contacts-list a:hover{
+	color: black;
+	transition: all 0.4s ease;
+}
+.contacts-list__mail:before:last-child{
+	display: none;
+}
 .main-wrapper{
 	display: flex;
 	padding: 2rem 4rem 5rem 4rem;
@@ -85,7 +104,7 @@ header{
 	.profile-info{
 		margin-bottom: 2rem;
 		p{
-			font-family: 'Open Sans', sans-serif;
+			font-family: $sans;
 		}
 	}
 	.interests{
@@ -106,7 +125,7 @@ header{
 	align-items: center;
 	margin-bottom: 1rem;
 	& h3{
-		font-family: 'Montserrat', sans-serif;
+		font-family: $montserrat;
 		font-size: 26px;
 	}
 }
@@ -130,7 +149,7 @@ header{
 		}
 	}
 	&__text{
-		font-family: 'Montserrat', sans-serif;
+		font-family: $montserrat;
 		font-weight: 700;
 	}
 	&__head{
@@ -143,51 +162,11 @@ header{
 .interests-icon__wrap:last-child{
 	margin-right: 0;
 }
-.reference-wrap{
-	margin-left: 2rem;
-}
-.reference-list{
-	list-style: none;
-	&__item{
-		position: relative;
-		margin-bottom: 35px;
-		font-family: 'Open Sans', sans-serif;
-		span{
-			color: #616caf;
-			font-weight: bold;
-		}
-	}
-	&__item:before{
-		    content: "";
-		    position: absolute;
-		    width: 15px;
-		    height: 15px;
-		    border: 1px solid #8a8686;
-		    border-radius: 50%;
-		    left: -30px;
-		    top: 25px;
-	}
-	&__item:after{
-		    position: absolute;
-		    top: 44px;
-		    left: -22px;
-		    width: 1px;
-		    height: calc(100% + 14px);
-		    content: '';
-		    background-color: #aca9a9;
-		    z-index: 0;
-	}
-	&__item:last-child:after{
-		display: none;
-	}
-	&__item:nth-child(2){
-		
-	}
-}
+
 .awwards{
 	.awwards-content{
 		p{
-			font-family: 'Open Sans', sans-serif;
+			font-family: $sans;
 			line-height: 24px;
 			font-weight: bold;
 		}
@@ -196,25 +175,24 @@ header{
 .right-block{
 	width: 80%;	
 	margin-left: 5rem;	
-	.experence{
-		
-		.experience-wrap{
+}
+.timeline-wrap{
+	display: flex;
+	flex-direction: column;
+		.timeline-item{
 			display: flex;
-			flex-direction: column;
-			.experience-item{
-				display: flex;
-				margin-left: 4rem;
-				&__time{
-					// width: 30%;
-					ul{
-						list-style: none;
-						li{
-							position: relative;
-							margin-bottom: 35px;
-							font-family: 'Open Sans', sans-serif;
-							span{
-								color: #616caf;
-								font-weight: bold;
+			margin-left: 4rem;
+			&__time{
+				// width: 30%;
+				ul{
+					list-style: none;
+					li{
+						position: relative;
+						margin-bottom: 35px;
+						font-family: $sans;
+						span{
+							color: #616caf;
+							font-weight: bold;
 							}
 						}
 						li:before{
@@ -241,22 +219,21 @@ header{
 				}
 				&__text{
 					width: 70%;
-					font-family: 'Open Sans', sans-serif;
+					font-family: $sans;
 					margin-left: 6rem;
 				}
 			}
-			.experience-item:last-child li:after{
-				display: none;
-			}
-		}
+		.timeline-item:last-child li:after{
+			display: none;
 	}
+
 }
 .right-block__title{
 			display: flex;
 			align-items: center;
 			margin-bottom: 1rem;
 			& h3{
-			font-family: 'Montserrat', sans-serif;
+			font-family: $montserrat;
 			font-size: 26px;
 			}
 		}
@@ -276,7 +253,7 @@ header{
 			    height: 110px;
 			    line-height: 110px;
 			    margin: 0 auto;
-		    	font-family: 'Open Sans', sans-serif;
+		    	font-family: $sans;
 		    	font-weight: 700;
 		 		font-size: 25px;
 		 		margin-bottom: 1rem;
@@ -287,7 +264,7 @@ header{
 			left: 0;
 		}
 		p{
-			font-family: 'Open Sans', sans-serif;
+			font-family: $sans;
 		   	font-weight: 700;
 		}
 	}
@@ -311,6 +288,9 @@ header{
 		justify-content: center;
 	}	
 	.main-info__profile .main-info__profile-spec h2{
+		text-align: center;
+	}
+	.main-info__profile .main-info__profile-spec h1{
 		text-align: center;
 	}
 	.main-info__profile {
@@ -343,7 +323,7 @@ header{
 	.left-block__title h3, .right-block__title h3{
 		font-size: 20px;
 	}
-	.right-block .experence .experience-wrap .experience-item__text{
+	.right-block .experence .timeline-wrap .timeline-item__text{
 		font-size: 14px;
 		margin-left: 0rem;
 	}
