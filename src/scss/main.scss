@@ -182,6 +182,7 @@ $montserrat: Montserrat-Regular, sans-serif;
 		.timeline-item{
 			display: flex;
 			margin-left: 4rem;
+			position: relative;
 			&__time{
 				// width: 30%;
 				ul{
@@ -195,7 +196,15 @@ $montserrat: Montserrat-Regular, sans-serif;
 							font-weight: bold;
 							}
 						}
-						li:before{
+					}
+				}
+				&__text{
+					width: 40%;
+					font-family: $sans;
+					margin-left: 5rem;
+					margin-bottom: 2rem;
+				}
+				&:before{
 							content: "";
 						    position: absolute;
 						    width: 15px;
@@ -205,26 +214,18 @@ $montserrat: Montserrat-Regular, sans-serif;
 						    left: -30px;
 						    top: 25px;
 						}
-						li:after{
+						&:after{
 							position: absolute;
 						    top: 44px;
 						    left: -22px;
 						    width: 1px;
-						    height: calc(100% + 14px);
+						    height: calc(100% + -20px);
 						    content: '';
 						    background-color: #aca9a9;
 						    z-index: 0;
 						}
-					}
-				}
-				&__text{
-					width: 40%;
-					font-family: $sans;
-					margin-left: 5rem;
-					margin-bottom: 2rem;
-				}
 			}
-		.timeline-item:last-child li:after{
+		.timeline-item:last-child:after{
 			display: none;
 	}
 
@@ -326,6 +327,7 @@ $montserrat: Montserrat-Regular, sans-serif;
 	}
 	.right-block .experence .timeline-wrap .timeline-item__text{
 		font-size: 14px;
+		margin-left: 1rem;
 	}
 	.skills-item__wrap{
 			margin-bottom: 2rem;
