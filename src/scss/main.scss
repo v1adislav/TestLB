@@ -330,8 +330,11 @@ $montserrat: Montserrat-Regular, sans-serif;
 	.skills-item__wrap{
 			margin-bottom: 2rem;
 		}
+	
+
+}
+@media screen and (max-width: 950px){
 	.skills-list .skills-item__wrap{
 		margin:auto;
 	}
-
 }
